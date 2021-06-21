@@ -6,32 +6,33 @@ Output: 2 4 6 8 12
 
 #include<stdio.h>
 
-void EvenFactors(int iNo)
+//function definition
+void PrintEvenFactors(int num)
 {
 	int i = 0;
-	
-	//updater to handle negative number
-	if(iNo<0)
+	if(num<0)
 	{
-		iNo = -iNo;
+		num = -num;
 	}
-	
-	for(i=1;i<=iNo/2;i++)
+	for(i=2;i<=num/2;i++)
 	{
-		if((i%2==0) && (iNo%i==0))
+		if(i%2==0)
 		{
-			printf("%d\t",i);
+			printf("%d ",i);
 		}
 	}
+	printf("\n");
 }
 
+//entry point function
 int main()
 {
-	int iNum = 0;
-	printf("Enter number:\n");
-	scanf("%d",&iNum);
+	int num = 0;
 	
-	EvenFactors(iNum);
+	printf("Enter number: \n");
+	scanf("%d",&num);
+	
+	PrintEvenFactors(num);
 	
 	return 0;
 }

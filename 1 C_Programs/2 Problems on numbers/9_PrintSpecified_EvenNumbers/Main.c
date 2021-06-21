@@ -1,40 +1,42 @@
 /*
-Write a program which accept one number from user and print that number of even numbers on screen.
+Problem Statement: Write a program which accept one number from user and print that number of even numbers on screen
 Input : 7
 Output: 2 4 6 8 10 12 14 
 */
 
+//header file for input output
 #include<stdio.h>
 
-void PrintEven(int iNo)
+//Function definition
+void PrintEven(int num)
 {
-	int i = 2;
-	
-	//Filter to handle negative numbers
-	if(iNo<0)
+	if(num<=0)
 	{
+		printf("Enter positive non zero number\n");
 		return;
 	}
 	
-	while(iNo > 0)
+	int i = 0;
+	int j = 2;
+	while(i<num)
 	{
-		if(i%2==0)
-		{
-			printf("%d\t",i);
-			iNo--;
-		}
+		printf("%d ",j);
+		j = j+2;
 		i++;
 	}
+	printf("\n");
 }
 
+//entry point function
 int main()
 {
-	int iNum = 0;
+	int num = 0;
 	
-	printf("Enter number:\n");
-	scanf("%d",&iNum);
+	printf("Enter number: \n");
+	scanf("%d",&num);
 	
-	PrintEven(iNum);
+	PrintEven(num);
 	
+	//return from main
 	return 0;
 }

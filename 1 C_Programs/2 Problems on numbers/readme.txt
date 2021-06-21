@@ -2,19 +2,19 @@
 Problems on numbers
 ==================================================================================
 1_DivideTwoNumbers
-Write a program that divides two numbers
+Write a C program that divides two numbers
 
 ==================================================================================
-2_PrintString_5_times
-Program to print 5 times “Hello World” on screen
+2_PrintString_multiple_times
+Accept a number from user and print "Hello World" that many times on screen
 
 ==================================================================================
-3_Print_5to1
-Program to print 5 to 1 numbers on screen
+3_Print_Numbers_ReverseOrder
+Accept a positive number from user and print numbers starting from that number till 1
 
 ==================================================================================
-4_CheckNumber_DivisibleBy5
-Accept one number and check whether it is divisible by 5 or not
+4_CheckDivisibility
+Accept a number from user. Accept another number from user and display whether first number is divisible by second number
 
 ==================================================================================
 5_PrintCharacter_SpecifiedNumberOfTimes

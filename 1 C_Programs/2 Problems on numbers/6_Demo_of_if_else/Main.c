@@ -1,24 +1,33 @@
 /*
-Problem Statement: Accept on number from user if number is less than 10 then print “Hello” otherwise print “Demo”.
+Problem Statement: Accept on number from user if number is less than 10 then print "Hello" otherwise print "Demo"
 */
 
+//header file for input output
 #include<stdio.h>
 
-int main()
+//function definition
+void CheckNumber(int num)
 {
-	int iNo = 0;
-	
-	printf("Enter number\n");
-	scanf("%d",&iNo);
-	
-	if(iNo<10)
+	if(num<10)
 	{
-		printf("Hello");
+		printf("Hello\n");
 	}
 	else
 	{
-		printf("Demo");
+		printf("Demo\n");
 	}
+}
+
+//entry point function
+int main()
+{
+	int num = 0;
 	
+	printf("Enter number: \n");
+	scanf("%d",&num);
+	
+	CheckNumber(num);
+	
+	//return from main
 	return 0;
 }

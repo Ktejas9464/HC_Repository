@@ -1,30 +1,44 @@
 /*
-Problem Statement: 4. Accept two numbers from user and display first number in second number of times.
+Problem Statement: Accept two numbers from user and display first number on screen second number of times
 */
 
+//header file for input output
 #include<stdio.h>
 
-void Display(int iNum1,int iNum2)
+//function definition
+void DisplayNumber(int num1, int num2)
 {
+	//counter variable
 	int i = 0;
-	for(i=0;i<iNum2;i++)
+	
+	//validate the input
+	if(num2<=0)
 	{
-		printf("%d\t",iNum1);
+		printf("Enter positive non zero value for second number\n");
+		return;
 	}
+	
+	for(i=0;i<num2;i++)
+	{
+		printf("%d ",num1);
+	}
+	printf("\n");
 }
 
+//entry point function
 int main()
 {
-	int iNo1 = 0;
-	int iNo2 = 0;
+	int num1 = 0, num2 = 0;
 	
-	printf("Enter first number:\n");
-	scanf("%d",&iNo1);
+	//Accept numbers from user
+	printf("Enter first number: \n");
+	scanf("%d",&num1);
 	
-	printf("Enter second number:\n");
-	scanf("%d",&iNo2);
+	printf("Enter second number: \n");
+	scanf("%d",&num2);
 	
-	Display(iNo1,iNo2);
+	DisplayNumber(num1,num2);
 	
+	//return from main
 	return 0;
 }

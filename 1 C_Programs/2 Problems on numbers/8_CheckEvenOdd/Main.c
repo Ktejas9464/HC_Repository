@@ -3,13 +3,14 @@ Problem Statement: Accept number from user and check whether number is even or o
 */
 
 #include<stdio.h>
-typedef int BOOL;
 #define TRUE 1
 #define FALSE 0
+typedef int BOOL;
 
-BOOL CheckEven(int iNum)
+//function definition
+BOOL CheckEven(int num)
 {
-	if(iNum%2==0)
+	if(num%2 == 0)
 	{
 		return TRUE;
 	}
@@ -19,23 +20,28 @@ BOOL CheckEven(int iNum)
 	}
 }
 
+//entry point function
 int main()
 {
-	int iNo = 0;
-	BOOL bRet = FALSE;
+	int num = 0;
+	BOOL result = FALSE;
 	
+	//Accept user input
 	printf("Enter number: \n");
-	scanf("%d",&iNo);
-	
-	bRet = CheckEven(iNo);
-	if(bRet==FALSE)
+	scanf("%d",&num);
+
+	//Call function
+	result = CheckEven(num);
+	//print the result (return value of the function)
+	if(result == TRUE)
 	{
-		printf("Odd\n");
+		printf("%d is even\n",num);
 	}
 	else
 	{
-		printf("Even\n");
+		printf("%d is odd\n",num);
 	}
 	
+	//return from main
 	return 0;
 }
